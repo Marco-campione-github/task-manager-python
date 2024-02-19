@@ -11,8 +11,7 @@ class TaskManager:
     
     def view_tasks(self):
         for index, task in enumerate(self.tasks):
-            status = "Completed" if task.is_completed() else "Pending"
-            print(f"{index + 1}. [{status}] {task.get_description()}")
+            print(f"{index + 1}. {task}")
 
     def mark_task_completed(self, task_index):
         if self.check_valid_task_index( task_index):
